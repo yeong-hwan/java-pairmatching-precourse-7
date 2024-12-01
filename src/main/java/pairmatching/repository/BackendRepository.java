@@ -8,14 +8,14 @@ import pairmatching.domain.Crew;
 import pairmatching.enums.Course;
 import pairmatching.utils.CrewParser;
 
-public class FrontendRepository {
-    private static final String FRONTEND_FILE_PATH = "src/main/resources/frontend-crew.md";
-    private static final Course FRONTEND_ROLE = Course.FRONTEND;
+public class BackendRepository {
+    private static final String BACKEND_FILE_PATH = "src/main/resources/backend-crew.md";
+    private static final Course BACKEND_ROLE = Course.BACKEND;
     private final List<Crew> crews;
 
-    public FrontendRepository() {
-        String crewData = readFileToString(FRONTEND_FILE_PATH);
-        this.crews = CrewParser.parseCrews(FRONTEND_ROLE, crewData);
+    public BackendRepository() {
+        String crewData = readFileToString(BACKEND_FILE_PATH);
+        this.crews = CrewParser.parseCrews(BACKEND_ROLE, crewData);
     }
 
     private String readFileToString(String filePath) {
