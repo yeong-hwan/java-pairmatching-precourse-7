@@ -1,5 +1,7 @@
 package pairmatching.enums;
 
+import java.util.Set;
+
 public enum Level {
     LEVEL1("레벨1"),
     LEVEL2("레벨2"),
@@ -13,5 +15,17 @@ public enum Level {
         this.name = name;
     }
 
-    // 추가 기능 구현
+    private String getName() {
+        return name;
+    }
+
+    public static Set<String> getLevels() {
+        return Set.of(
+                LEVEL1.getName(),
+                LEVEL2.getName(),
+                LEVEL3.getName(),
+                LEVEL4.getName(),
+                LEVEL5.getName()
+        );
+    }
 }
